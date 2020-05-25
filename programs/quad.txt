@@ -1,0 +1,12 @@
+(defun quadric(a b c)
+	(cond ((equal a 0)(write-line "not quadric")))
+	(setq D (- (* b b) (* 4 a c)))
+	;если дискриминант меньше нуля
+	(cond ((< D 0) (write-line(concatenate 'string "x1,x2 = " (write-to-string (- b)) "+-" (write-to-string (sqrt(* D -1))) "i/" (write-to-string (* a 2))))))
+	;если дискриминант равен 0
+	(cond ((equal D 0) (write-line(concatenate 'string "x = " (write-to-string (/ (- b) (* a 2)))))))
+	;если больше нуля
+	(cond ((> D 0) (write-line(concatenate 'string "x1 = " (write-to-string (/ (+ (- b) (sqrt D)) (* a 2))) " x2 = "(write-to-string (/ (- (- b) (sqrt D)) (* a 2))))))))
+(quadric 1 3 -4);2 корня
+(quadric 1 2 1);1 корень
+(quadric 15 1 2);отрицательный дисриминант

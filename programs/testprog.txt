@@ -1,0 +1,13 @@
+;для тестирования таблицы ID
+(defun aaa (a b)
+	(setq D (+ a b)))
+(aaa 2 3)
+;Программа для проверки арифметики и перевода в обр. польскую
+#|(defun ariph (a b)
+	(setq D (- (/ a b) (+ b a) (/ a b))))
+	;(setq D (+ (- b) (+ a b))))
+(write-line (concatenate 'string (write-to-string (ariph 5 11))))|#
+#|
+В 1 случае ответ 55.454544
+Во 2 5.0
+|#

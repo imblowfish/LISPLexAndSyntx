@@ -1,0 +1,7 @@
+(defun factorial (n)
+  (if (equal n 0)
+      (setq n 1)
+      (* n (factorial (- n 1)))))
+
+(loop for i from 0 to 16
+   do (write-line(concatenate 'string (write-to-string i) "!=" (write-to-string(factorial i)))))
